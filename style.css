@@ -1,0 +1,115 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(to top, #884A39, #FFC26F);
+    height: 100vh; */
+    background: linear-gradient(111deg,#08025c,#feda7e,#8ad3ed,#bc96fc,#88fff1);
+    background-size: 300% 300%;
+    animation: gradient-animation 45s ease infinite;
+	height: 100vh;
+    text-align: center;
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+.grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    
+}
+.contain{
+    width:430px ;
+    height:563px;
+    border-radius: 0px 0px 7px 7px;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,80px);
+    gap:5px;
+    box-shadow: 0px 5px 10px 10px rgba(86, 78, 78,0.5);
+}
+.grid button{
+    cursor: pointer;
+    font-size: 1.7rem;
+    border:none;
+}
+
+.span{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(79, 69, 87, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.pre-op{
+    color:rgba(255,255,255,0.75);
+    font-size: 1.5rem;
+}
+.sec-op{
+    color:white;
+    font-size: 2.5rem;
+}
+.equal{
+    background-color:rgba(76, 187, 23,0.9) ;
+}
+.equal:hover{
+    background-color:rgba(167, 216, 144, 0.9) ;
+}
+.operation{
+    background-color:rgba(245, 176, 65,0.7) ;
+}
+.operation:hover{
+    background-color:rgba(244, 208, 150, 0.8);
+}
+.btn{
+    background-color: rgb(210, 209, 209);
+}
+.btn:hover{
+    background-color:rgb(231, 230, 230) ;
+}
+.ac,.del{
+    color:red;
+    background-color: rgb(210, 209, 209);
+}
+.ac:hover,.del:hover{
+    background-color: rgb(231, 230, 230);
+}
+button{
+    border-radius: 5px;
+}
+p{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
